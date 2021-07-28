@@ -13,4 +13,6 @@ extension Color {
 
 extension UIColor {
     static var primaryColor = UIColor(named: "primaryColor") ?? UIColor()
+    static var backgroundColor: UIColor = UIColor(named:"backgroundColor") ?? UIColor()
+
 }

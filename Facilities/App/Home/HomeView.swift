@@ -8,44 +8,34 @@
 import SwiftUI
 
 struct HomeView: View {
+    init() {
+        UIScrollView.appearance().backgroundColor = .backgroundColor
+    }
     var body: some View {
         ZStack {
+            Color(.primaryColor)
+                .edgesIgnoringSafeArea(.all)
+            
             NavigationView{
-                List{
-                    ZStack {
-                        Color(.systemBackground)
-                            .frame(height: 250)
-                            .cornerRadius(12)
-                            .padding(.horizontal)
-                            .shadow(radius: 10)
-                        VStack(alignment: .leading) {
-                            Image("ImageBanner")
-                                .resizable()
-                                .scaledToFit()
-                                .cornerRadius(10,corners: [.topLeft,.topRight])
-                                .frame(maxWidth: .infinity)
-                                .padding(.horizontal)
-                            VStack(alignment: .leading){
-                                Text("Facilities License")
-                                    .font(.title2)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.primaryColor)
-                                Text("This is Services")
-                                    .font(.body)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.secondary)
-                                
-                            }.padding([.leading], 35)
-                            Spacer()
-                        }
-                    }
-                    .listRowBackground(Color.backgroundColor)
+                ScrollView(.vertical,showsIndicators: false){
+                    ForEach (0 ..< 10){ index in
+                        NavigationLink(
+                            destination: FacilitiesDetailsView(),
+                            label: {
+                                FacilitiesCell()
+
+                            })
+                    }.background(Color.backgroundColor)
+                    
                 }
-                
+                .animation(.default)
                 .navigationTitle("Facilities")
                 .navigationBarTitleDisplayMode(.inline)
-            }
 
+            }.background(Color.backgroundColor)
+            .foregroundColor(Color.backgroundColor)
+
+            .listSeparatorStyle(style: .none)
             .navigationAppearance(backgroundColor: .primaryColor, foregroundColor: .systemBackground, tintColor: .white, hideSeparator: false)
         }
     }

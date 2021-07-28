@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		DA6D619326B19A6200562E1A /* FacilitiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D619226B19A6200562E1A /* FacilitiesApp.swift */; };
-		DA6D619526B19A6200562E1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D619426B19A6200562E1A /* ContentView.swift */; };
+		DA6D619526B19A6200562E1A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D619426B19A6200562E1A /* HomeView.swift */; };
 		DA6D619726B19A6500562E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6D619626B19A6500562E1A /* Assets.xcassets */; };
 		DA6D619A26B19A6500562E1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6D619926B19A6500562E1A /* Preview Assets.xcassets */; };
+		DA6D61A726B19FF100562E1A /* NavigationModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D61A626B19FF100562E1A /* NavigationModifiers.swift */; };
+		DA6D61A926B1A06100562E1A /* ExtinsionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D61A826B1A06100562E1A /* ExtinsionsView.swift */; };
+		DA6D61AB26B1A77200562E1A /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D61AA26B1A77200562E1A /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA6D618F26B19A6200562E1A /* Facilities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facilities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6D619226B19A6200562E1A /* FacilitiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesApp.swift; sourceTree = "<group>"; };
-		DA6D619426B19A6200562E1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DA6D619426B19A6200562E1A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DA6D619626B19A6500562E1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA6D619926B19A6500562E1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA6D619B26B19A6500562E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA6D61A626B19FF100562E1A /* NavigationModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifiers.swift; sourceTree = "<group>"; };
+		DA6D61A826B1A06100562E1A /* ExtinsionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtinsionsView.swift; sourceTree = "<group>"; };
+		DA6D61AA26B1A77200562E1A /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +58,10 @@
 		DA6D619126B19A6200562E1A /* Facilities */ = {
 			isa = PBXGroup;
 			children = (
-				DA6D619226B19A6200562E1A /* FacilitiesApp.swift */,
-				DA6D619426B19A6200562E1A /* ContentView.swift */,
-				DA6D619626B19A6500562E1A /* Assets.xcassets */,
-				DA6D619B26B19A6500562E1A /* Info.plist */,
+				DA6D61A526B19FDB00562E1A /* Modifiers+Extensions */,
+				DA6D61A326B19ACE00562E1A /* Network */,
+				DA6D61A226B19AB400562E1A /* App */,
+				DA6D61A126B19A8E00562E1A /* utalities */,
 				DA6D619826B19A6500562E1A /* Preview Content */,
 			);
 			path = Facilities;
@@ -67,6 +73,57 @@
 				DA6D619926B19A6500562E1A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DA6D61A126B19A8E00562E1A /* utalities */ = {
+			isa = PBXGroup;
+			children = (
+				DA6D619626B19A6500562E1A /* Assets.xcassets */,
+				DA6D619B26B19A6500562E1A /* Info.plist */,
+				DA6D619226B19A6200562E1A /* FacilitiesApp.swift */,
+			);
+			path = utalities;
+			sourceTree = "<group>";
+		};
+		DA6D61A226B19AB400562E1A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DA6D61A426B19AE900562E1A /* Home */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DA6D61A326B19ACE00562E1A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DA6D61A426B19AE900562E1A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DA6D61AC26B1AC5000562E1A /* ResuableViews */,
+				DA6D619426B19A6200562E1A /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DA6D61A526B19FDB00562E1A /* Modifiers+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA6D61A626B19FF100562E1A /* NavigationModifiers.swift */,
+				DA6D61A826B1A06100562E1A /* ExtinsionsView.swift */,
+				DA6D61AA26B1A77200562E1A /* Color+Extensions.swift */,
+			);
+			path = "Modifiers+Extensions";
+			sourceTree = "<group>";
+		};
+		DA6D61AC26B1AC5000562E1A /* ResuableViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ResuableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +195,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA6D619526B19A6200562E1A /* ContentView.swift in Sources */,
+				DA6D61AB26B1A77200562E1A /* Color+Extensions.swift in Sources */,
+				DA6D619526B19A6200562E1A /* HomeView.swift in Sources */,
 				DA6D619326B19A6200562E1A /* FacilitiesApp.swift in Sources */,
+				DA6D61A926B1A06100562E1A /* ExtinsionsView.swift in Sources */,
+				DA6D61A726B19FF100562E1A /* NavigationModifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +331,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Facilities/Preview Content\"";
 				DEVELOPMENT_TEAM = 2WTP6CWW36;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Facilities/Info.plist;
+				INFOPLIST_FILE = Facilities/utalities/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,7 +353,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Facilities/Preview Content\"";
 				DEVELOPMENT_TEAM = 2WTP6CWW36;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Facilities/Info.plist;
+				INFOPLIST_FILE = Facilities/utalities/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

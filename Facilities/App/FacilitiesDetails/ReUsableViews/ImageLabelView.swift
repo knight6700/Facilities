@@ -17,6 +17,8 @@ struct ImageLabelView: View {
                 .scaledToFit()
                 .frame(width: 20, height: 20)
             Text(text)
+                .fontWeight(.bold)
+                .foregroundColor(.titleColor)
         }
     }
 }

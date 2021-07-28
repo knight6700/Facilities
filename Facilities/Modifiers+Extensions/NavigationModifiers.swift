@@ -12,15 +12,23 @@ struct NavAppearanceModifier: ViewModifier {
         navBarAppearance.titleTextAttributes = [.foregroundColor: foregroundColor]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: foregroundColor]
         navBarAppearance.backgroundColor = backgroundColor
+        
         if hideSeparator {
             navBarAppearance.shadowColor = .clear
+            navBarAppearance.backgroundImage = UIImage()
         }
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().compactAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+
         if let tintColor = tintColor {
             UINavigationBar.appearance().tintColor = tintColor
         }
+        let yourBackImage = UIImage(named: "back_button_image")
+        UINavigationBar.appearance().backIndicatorImage = yourBackImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = yourBackImage
+        UINavigationBar.appearance().backItem?.title = "Custom"
+
     }
     
     func body(content: Content) -> some View {

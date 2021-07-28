@@ -25,6 +25,7 @@
 		DA6D61C426B1E6DA00562E1A /* FeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D61C326B1E6DA00562E1A /* FeesView.swift */; };
 		DA6D61C626B1E72800562E1A /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D61C526B1E72800562E1A /* TimeView.swift */; };
 		DA6D61C826B1E77F00562E1A /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D61C726B1E77F00562E1A /* ServicesView.swift */; };
+		DA6D61CA26B1F00600562E1A /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D61C926B1F00600562E1A /* BackButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		DA6D61C326B1E6DA00562E1A /* FeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeesView.swift; sourceTree = "<group>"; };
 		DA6D61C526B1E72800562E1A /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 		DA6D61C726B1E77F00562E1A /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
+		DA6D61C926B1F00600562E1A /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				DA6D61B426B1D12700562E1A /* WebView.swift */,
+				DA6D61C926B1F00600562E1A /* BackButtonView.swift */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				DA6D61BB26B1D7CD00562E1A /* FacilitiesDetailsView.swift in Sources */,
 				DA6D61C226B1E0B300562E1A /* PrerequisitesView.swift in Sources */,
 				DA6D619526B19A6200562E1A /* HomeView.swift in Sources */,
+				DA6D61CA26B1F00600562E1A /* BackButtonView.swift in Sources */,
 				DA6D61B026B1ACFB00562E1A /* FacilitiesCell.swift in Sources */,
 				DA6D619326B19A6200562E1A /* FacilitiesApp.swift in Sources */,
 				DA6D61A926B1A06100562E1A /* ExtinsionsView.swift in Sources */,

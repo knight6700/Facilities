@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct FacilitiesDetailsView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     var body: some View {
-        ScrollView {
+        ScrollView(.vertical, showsIndicators: false) {
             ZStack {
                 Color(.systemBackground)
                     .frame(minHeight: 200, maxHeight: .infinity)
@@ -40,6 +42,9 @@ struct FacilitiesDetailsView: View {
                 
             }.padding([.top, .bottom], 20)
         }
+        .navigationTitle("User Clinic Escalator License")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BackButtonView())
     }
 }
 

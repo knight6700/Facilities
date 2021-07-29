@@ -10,6 +10,10 @@ import SwiftUI
 struct FacilitiesDetailsView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
+    init() {
+        UIScrollView.appearance().backgroundColor = .backgroundColor
+    }
+
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             ZStack {

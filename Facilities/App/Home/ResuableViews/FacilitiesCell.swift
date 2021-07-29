@@ -45,6 +45,7 @@ struct FacilitiesCell_Previews: PreviewProvider {
     static var previews: some View {
         FacilitiesCell()
             .previewLayout(.sizeThatFits)
+            .background(Color.backgroundColor)
         
     }
 }

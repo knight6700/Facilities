@@ -26,6 +26,7 @@
 		DA6D61C626B1E72800562E1A /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D61C526B1E72800562E1A /* TimeView.swift */; };
 		DA6D61C826B1E77F00562E1A /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D61C726B1E77F00562E1A /* ServicesView.swift */; };
 		DA6D61CA26B1F00600562E1A /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D61C926B1F00600562E1A /* BackButtonView.swift */; };
+		DA6D61CC26B2195000562E1A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D61CB26B2194F00562E1A /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		DA6D61C526B1E72800562E1A /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 		DA6D61C726B1E77F00562E1A /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
 		DA6D61C926B1F00600562E1A /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		DA6D61CB26B2194F00562E1A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				DA6D61AC26B1AC5000562E1A /* ResuableViews */,
 				DA6D619426B19A6200562E1A /* HomeView.swift */,
+				DA6D61CB26B2194F00562E1A /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA6D61B226B1AF1600562E1A /* ListModefiers.swift in Sources */,
+				DA6D61CC26B2195000562E1A /* HomeViewModel.swift in Sources */,
 				DA6D61B526B1D12700562E1A /* WebView.swift in Sources */,
 				DA6D61C626B1E72800562E1A /* TimeView.swift in Sources */,
 				DA6D61AB26B1A77200562E1A /* Color+Extensions.swift in Sources */,

@@ -15,7 +15,8 @@ struct ListSeparatorStyle: ViewModifier {
         content
             .onAppear() {
                 UITableView.appearance().separatorStyle = self.style
-                UITableView.appearance().backgroundColor = .backgroundColor
+                UITableView.appearance().backgroundColor = .titleColor
+                UITableViewCell.appearance().accessoryType = .checkmark
             }
     }
 }

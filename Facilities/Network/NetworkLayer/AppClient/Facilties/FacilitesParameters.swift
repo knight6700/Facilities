@@ -7,7 +7,7 @@
 
 import Foundation
 struct  FacilitiesParameters: Encodable {
-    var pageSize: String
+    var pageSize: Int
     var pageIndex: String
     var departmentId: String
     enum CodingKeys: String, CodingKey {

@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct RequireDocumentsView: View {
+
+
+    var code: String
+    @State var dynamicHeight: CGFloat
     var body: some View {
         VStack (alignment: .leading) {
             ImageLabelView(imageName: "requireddoc", text: "Required Documents")
             VStack (alignment: .leading) {
-                Text("National ID")
-                Text("2 images")
-                Text("Clinic License")
-                Text("3 copy of clinic License")
+                Webview(dynamicHeight: $dynamicHeight, codeString: code)
+                    .frame(height: dynamicHeight)
             }
+            .frame(height: 150)
             .foregroundColor(.black)
         }
     }
@@ -24,7 +27,7 @@ struct RequireDocumentsView: View {
 
 struct RequireDocumentsView_Previews: PreviewProvider {
     static var previews: some View {
-        RequireDocumentsView()
+        RequireDocumentsView(code: "National ID", dynamicHeight: 123)
             .previewLayout(.sizeThatFits)
             .padding()
     }

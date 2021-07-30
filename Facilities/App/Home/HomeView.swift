@@ -9,47 +9,46 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel = ViewModel()
-    @State var numberOfPages = 10
+
     init() {
         UITableView.appearance().showsVerticalScrollIndicator = false
-        UITableView.appearance().separatorStyle = .none
-        UITableViewCell.appearance().accessoryType = .none
-        
-        
+        UITableView.appearance().backgroundColor = .backgroundColor
     }
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(1..<10, id: \.self) { view in
-                    NavigationLink(
-                        destination: FacilitiesDetailsView(),
-                        label: {
-                            FacilitiesCell()
-                        })
-                        .background(Color.backgroundColor)
-                        .listRowBackground(Color.backgroundColor)
-                        .listRowInsets(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 2))
-                        .listStyle(PlainListStyle())
-                        .listSeparatorStyle(style: .none)
+            ZStack {
+                List {
                     
+                    ForEach(viewModel.facilitiesModel) { item in
+                        NavigationLink(
+                            destination: FacilitiesDetailsView(viewModel: viewModel.setupDetailsViewModel(facility: item)),
+                            label: {
+                                FacilitiesCell(model: item)
+                            })
+                            .background(Color.backgroundColor)
+                            .listRowBackground(Color.backgroundColor)
+                            .listRowInsets(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 2))
+                            .listStyle(PlainListStyle())
+                            .listSeparatorStyle(style: .none)
+                    }
+
+                    if !viewModel.isLoadMore && viewModel.newPages != 0 {
+                        LoadingView().onAppear{
+                            viewModel.load()
+                        }
+
+                    }
+
                 }
                 
-                if viewModel.pageNumber < numberOfPages && viewModel.isLoadMore {
-                    Text("Load More").onAppear (perform: {
-                        viewModel.isLoadMore = true
-                        viewModel.pageNumber += 1
+                .modifier(CustomNavigationModifiers())
+                if viewModel.isLoadMore && viewModel.facilitiesModel.count == 0 {
+                    LoadingView().onAppear{
                         viewModel.load()
-                    })
+                    }
                 }
             }
-            .background(Color.backgroundColor)
-            .listStyle(PlainListStyle())
-            .navigationTitle("Facilities")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationAppearance(backgroundColor: .primaryColor, foregroundColor: .systemBackground, tintColor: .white, hideSeparator: false)
-            .animation(.default)
-            
         }
     }
 }

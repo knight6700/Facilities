@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct TimeView: View {
+    var code: String
     var body: some View {
         VStack (alignment: .leading) {
             ImageLabelView(imageName: "time", text: "Time")
             VStack (alignment: .leading) {
-                Text("5 Working Days")
+                Text(code)
             }
             .foregroundColor(.black)
         }
@@ -21,7 +22,7 @@ struct TimeView: View {
 
 struct TimeView_Previews: PreviewProvider {
     static var previews: some View {
-        TimeView()
+        TimeView(code: "")
             .previewLayout(.sizeThatFits)
             .padding()
     }

@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ServicesView: View {
+    var code: String
     var body: some View {
         VStack (alignment: .leading) {
             ImageLabelView(imageName: "service", text: "Services Channels")
             VStack (alignment: .leading) {
-                Text("Services Channels")
+                Text(code)
             }
             .foregroundColor(.black)
         }
@@ -21,6 +22,6 @@ struct ServicesView: View {
 
 struct ServicesView_Previews: PreviewProvider {
     static var previews: some View {
-        ServicesView()
+        ServicesView(code: "")
     }
 }

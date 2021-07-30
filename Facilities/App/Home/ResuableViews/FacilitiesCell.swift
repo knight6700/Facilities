@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FacilitiesCell: View {
+   @State var model: FacilitiesData
     var body: some View {
         ZStack {
             Color(.systemBackground)
@@ -16,21 +17,25 @@ struct FacilitiesCell: View {
                 .padding(.horizontal)
                 .shadow(radius: 10)
             VStack(alignment: .leading) {
-                Image("ImageBanner")
-                    .resizable()
-                    .scaledToFit()
+                FacilitiesRemoteImage(urString: model.imageSrc)
                     .cornerRadius(10,corners: [.topLeft,.topRight])
-                    .frame(maxWidth: .infinity)
+                    .frame(height: 150)
                     .padding(.horizontal)
+
                 VStack(alignment: .leading){
-                    Text("Facilities License")
+                    Text(model.title)
                         .font(.title2)
                         .fontWeight(.semibold)
                         .foregroundColor(.titleColor)
-                    Text("This is Services enables the individuals to ...This is Services enables the individuals to ...")
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.75)
+                        .padding(.trailing)
+                    Text(model.briefTrimmed)
                         .font(.body)
                         .fontWeight(.semibold)
                         .foregroundColor(.secondary)
+                        .minimumScaleFactor(0.75)
+
                     
                 }.padding([.leading], 35)
                 .padding(.trailing)
@@ -43,7 +48,7 @@ struct FacilitiesCell: View {
 
 struct FacilitiesCell_Previews: PreviewProvider {
     static var previews: some View {
-        FacilitiesCell()
+        FacilitiesCell(model: FacilitiesMockAp.departmentSample)
             .previewLayout(.sizeThatFits)
             .background(Color.backgroundColor)
         

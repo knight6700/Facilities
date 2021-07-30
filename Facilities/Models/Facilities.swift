@@ -6,27 +6,9 @@
 //
 
 import Foundation
-struct FacilitiesModel: Codable {
-    let data: [Datum]
-    let isSucceed: Bool
-    let messages: [String]
-    let encryptedMessages: String?
-    let messagesCode: Int
-    let internalMessages, serviceDocuments: [String?]
-
-    enum CodingKeys: String, CodingKey {
-        case data = "Data"
-        case isSucceed = "IsSucceed"
-        case messages = "Messages"
-        case encryptedMessages = "EncryptedMessages"
-        case messagesCode = "MessagesCode"
-        case internalMessages = "InternalMessages"
-        case serviceDocuments = "ServiceDocuments"
-    }
-}
 
 // MARK: - Datum
-struct Datum: Codable {
+struct FacilitiesData: Codable, Identifiable {
     let id: Int
     let title, titleEN, titleAR, titleTrimmed: String
     let titleTrimmedEN: String
@@ -49,7 +31,7 @@ struct Datum: Codable {
     let imageSrc, mobileImageSrc: String
     let detailsURL: String
     let assistingDocumentURL: [String]
-    let subServices: [Datum]?
+    let subServices: [FacilitiesData]?
     let hasSubServices: Bool
 
     enum CodingKeys: String, CodingKey {

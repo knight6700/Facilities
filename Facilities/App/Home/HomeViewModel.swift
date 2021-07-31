@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 class ViewModel: ObservableObject {
     @Published var pageNumber = 1
     @Published var isLoadMore = true
@@ -14,7 +15,7 @@ class ViewModel: ObservableObject {
     @Published var newPages = 1
     
     let api = FacilitiesApiClient()
-    func load() {
+    func getFacilities() {
         isLoadMore = true
         let parameters = FacilitiesParameters(pageSize: 10, pageIndex: String(pageNumber), departmentId: "2")
         api.getSettings(parameters: parameters) {[weak self] result, error in

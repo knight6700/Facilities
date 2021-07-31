@@ -8,34 +8,6 @@
 import SwiftUI
 import WebKit
 
-struct WebView : UIViewRepresentable {
-    
-    let codeString: String
-    @Binding var dynamicHeight: CGFloat
-
-    
-    func makeUIView(context: Context) -> WKWebView  {
-        return WKWebView()
-    }
-    
-    func updateUIView(_ uiView: WKWebView, context: Context) {
-        uiView.loadHTMLString("<html><body><p><font size=30>" + codeString + "</font></p></body></html>", baseURL: nil)
-        uiView.evaluateJavaScript("document.documentElement.scrollHeight", completionHandler: { (height, error) in
-            DispatchQueue.main.async {
-                self.dynamicHeight = height as! CGFloat
-            }
-        })
-
-    }
-    
-}
-
-struct WebView_Previews : PreviewProvider {
-    static var previews: some View {
-        WebView(codeString: "", dynamicHeight: .constant(123))
-    }
-}
-
 struct Webview : UIViewRepresentable {
     @Binding var dynamicHeight: CGFloat
     let codeString: String

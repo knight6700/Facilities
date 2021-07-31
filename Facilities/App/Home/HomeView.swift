@@ -35,7 +35,7 @@ struct HomeView: View {
 
                     if !viewModel.isLoadMore && viewModel.newPages != 0 {
                         LoadingView().onAppear{
-                            viewModel.load()
+                            viewModel.getFacilities()
                         }
 
                     }
@@ -45,7 +45,7 @@ struct HomeView: View {
                 .modifier(CustomNavigationModifiers())
                 if viewModel.isLoadMore && viewModel.facilitiesModel.count == 0 {
                     LoadingView().onAppear{
-                        viewModel.load()
+                        viewModel.getFacilities()
                     }
                 }
             }

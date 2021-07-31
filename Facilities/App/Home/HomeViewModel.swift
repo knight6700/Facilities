@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-class ViewModel: ObservableObject {
+class HomeViewModel: ObservableObject {
     @Published var pageNumber = 1
     @Published var isLoadMore = true
     @Published var facilitiesModel: [FacilitiesData] = []

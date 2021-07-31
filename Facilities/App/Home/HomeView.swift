@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var viewModel = ViewModel()
+    @StateObject var viewModel = HomeViewModel()
 
     init() {
         UITableView.appearance().showsVerticalScrollIndicator = false

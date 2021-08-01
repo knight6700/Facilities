@@ -25,7 +25,7 @@ class FacilitiesTests: XCTestCase {
     }
     
     func testDetailsViewModel() {
-        let viewModelDetails =   viewModel?.setupDetailsViewModel(facility: FacilitiesMockAp.departmentSample)
+        let viewModelDetails =   viewModel?.setupDetailsViewModel(facility: FacilitiesMockUp.departmentSample)
         XCTAssertNotNil(viewModelDetails)
     }
     /// in First Run

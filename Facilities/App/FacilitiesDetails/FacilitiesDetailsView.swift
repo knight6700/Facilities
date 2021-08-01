@@ -53,7 +53,7 @@ struct FacilitiesDetailsView: View {
 
 struct FacilitiesDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        FacilitiesDetailsView(viewModel: ContainerDetailsViewModel(facility: FacilitiesMockAp.departmentSample))
+        FacilitiesDetailsView(viewModel: ContainerDetailsViewModel(facility: FacilitiesMockUp.departmentSample))
             .previewDevice("iPhone 12")
     }
 }

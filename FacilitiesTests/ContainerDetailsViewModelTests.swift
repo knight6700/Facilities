@@ -10,7 +10,7 @@ import XCTest
 class ContainerDetailsViewModelTests: XCTestCase {
     var viewModel: ContainerDetailsViewModel?
     override func setUpWithError() throws {
-        viewModel = ContainerDetailsViewModel(facility: FacilitiesMockAp.departmentSample)
+        viewModel = ContainerDetailsViewModel(facility: FacilitiesMockUp.departmentSample)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 

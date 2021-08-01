@@ -48,7 +48,7 @@ struct FacilitiesCell: View {
 
 struct FacilitiesCell_Previews: PreviewProvider {
     static var previews: some View {
-        FacilitiesCell(model: FacilitiesMockAp.departmentSample)
+        FacilitiesCell(model: FacilitiesMockUp.departmentSample)
             .previewLayout(.sizeThatFits)
             .background(Color.backgroundColor)
         
